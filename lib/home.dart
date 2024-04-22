@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
               height: 150,
               color: const Color(0xFF143c8f),
               child: Padding(
-                padding: const EdgeInsets.only(left: 25, right: 20, top: 15),
+                padding: const EdgeInsets.only(left: 25, right: 20, top: 10),
                 child: Row(
                   children: [
                     Container(
