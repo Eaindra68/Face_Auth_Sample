@@ -1,7 +1,11 @@
-import 'package:es_hr/home.dart';
+import 'package:es_hr/pages/auth_page.dart';
+import 'package:es_hr/service/locator.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  setupServices();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,9 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: false),
+      theme: ThemeData(
+        useMaterial3: false,
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       title: 'Material App',
-      home: MyHomePage(),
+      home: AuthPage(),
     );
   }
 }
