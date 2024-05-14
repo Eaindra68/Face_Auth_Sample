@@ -4,7 +4,7 @@ class AppBarWhiteCorner extends StatelessWidget {
   const AppBarWhiteCorner({super.key, this.color});
   final Color? color;
 
-  static const double kHeight = 30;
+  static const double kHeight = 60;
 
   @override
   Widget build(BuildContext context) {
