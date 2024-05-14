@@ -74,22 +74,26 @@ class _MyHomePageState extends State<AuthPage> {
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
+                    children: [
                       const SizedBox(height: 30),
                       Container(
                         width: MediaQuery.of(context).size.width * 0.8,
-                        child: const Column(
+                        child: Column(
                           children: [
-                            SizedBox(width: 30),
-                            Text(
-                              "ATTENDANCE CHECK",
+                            const SizedBox(width: 30),
+                            Image.asset(
+                              'images/face.png',
+                              width: 200,
+                              height: 200,
+                            ),
+                            const SizedBox(height: 40),
+                            const Text(
+                              "Face Recognition & Detection Flutter ",
                               style: TextStyle(
                                   fontSize: 25, fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,
                             ),
-                            SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                           ],
                         ),
                       ),
@@ -102,7 +106,7 @@ class _MyHomePageState extends State<AuthPage> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      CheckInPage(),
+                                      const CheckInPage(),
                                 ),
                               );
                             },
@@ -126,7 +130,7 @@ class _MyHomePageState extends State<AuthPage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'CHECK IN',
+                                    'LOG IN',
                                     style: TextStyle(color: Color(0xFF0F0BDB)),
                                   ),
                                   SizedBox(width: 10),
@@ -141,7 +145,8 @@ class _MyHomePageState extends State<AuthPage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (BuildContext context) => SignUp(),
+                                  builder: (BuildContext context) =>
+                                      const SignUp(),
                                 ),
                               );
                             },
